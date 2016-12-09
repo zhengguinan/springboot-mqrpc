@@ -68,9 +68,11 @@
         }
     }
 ```
+以下为测试图例
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/1209/224812_d065d835_492218.png "在这里输入图片标题")
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/1209/224822_878ad0d7_492218.png "在这里输入图片标题")
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/1209/224833_86035221_492218.png "在这里输入图片标题")
 
-3.最后的最后的
-欢迎光顾，作者博客：http://www.kailing.pub/
+4.最后的最后
+如果对你有用，就star一波吧
+欢迎光临作者博客：http://www.kailing.pub
