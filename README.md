@@ -34,4 +34,4 @@
 
 9）生产者得到最终结果。
 3.
-#作者博客地址：(http://http://www.kailing.pub/)
+作者博客地址：http://www.kailing.pub/
