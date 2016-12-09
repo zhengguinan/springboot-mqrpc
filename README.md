@@ -33,5 +33,42 @@
 8）client 接收到消息，并进行解码；
 
 9）生产者得到最终结果。
-3.最后的最后的
+3.暴力测试代码及图例
+```
+     /**
+     * 暴力测试
+     * @param args
+     */
+    public static void main(String[] args) {
+        GenericXmlApplicationContext context = new GenericXmlApplicationContext(
+                "classpath:/applicationContext-client.xml");
+        Service service = (Service) context.getBean("myService");
+        new ClientTest().exec(service);
+    }
+    public void exec(Service service){
+        ExecutorService executorService= Executors.newFixedThreadPool(30);
+        for(int i=0;i<=30;i++){
+            executorService.submit(new Task(service));
+        }
+    }
+    private class Task implements Callable {
+        private Service service;
+        public Task(Service service){
+            this.service=service;
+        }
+        @Override
+        public Object call() throws Exception {
+            for(int i=0;i<=100000;i++){
+                System.out.println("servicEcho当前线程："+Thread.currentThread().getName()+"| 线程任务数"+i+"| 输出："+service.echo("Hello AMQP!"));
+                System.out.println("serviceStudent当前线程："+Thread.currentThread().getName()+"| 线程任务数"+i+"| 输出："+service.getStudent(null).getName());
+
+            }
+            return null;
+        }
+    }
+```
+![输入图片说明](http://git.oschina.net/uploads/images/2016/1209/224508_52ebf912_492218.png "在这里输入图片标题")
+![输入图片说明](http://git.oschina.net/uploads/images/2016/1209/224536_4d394568_492218.png "在这里输入图片标题")
+![输入图片说明](http://git.oschina.net/uploads/images/2016/1209/224546_57d6af2c_492218.png "在这里输入图片标题")
+4.最后的最后的
 欢迎光顾，作者博客：http://www.kailing.pub/
