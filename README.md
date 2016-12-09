@@ -33,5 +33,5 @@
 8）client 接收到消息，并进行解码；
 
 9）生产者得到最终结果。
-3.
-作者博客地址：http://www.kailing.pub/
+3.最后的最后的
+欢迎光顾，作者博客：http://www.kailing.pub/
